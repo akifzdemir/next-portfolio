@@ -25,7 +25,7 @@ const DarkModeToggle = () => {
     }, [])
 
     const darkModeActive =
-        process.browser && document.documentElement.classList.contains('dark')
+        typeof window !== 'undefined' && document.documentElement.classList.contains('dark')
     return (
         <AnimatePresence initial={false}>
             <motion.button
