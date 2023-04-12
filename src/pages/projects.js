@@ -1,10 +1,10 @@
 import Card from '@/components/Card'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
-export default function projects({ GITHUB_AUTH_TOKEN }) {
+export default function Projects({ GITHUB_AUTH_TOKEN }) {
     const headers = {
         'Authorization': `Bearer ${GITHUB_AUTH_TOKEN}`
     }
