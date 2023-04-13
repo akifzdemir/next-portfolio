@@ -9,10 +9,9 @@ export default function Projects({ GITHUB_AUTH_TOKEN }) {
         'Authorization': `Bearer ${GITHUB_AUTH_TOKEN}`
     }
     const [repos, setRepos] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     const getRepos = async () => {
-        setIsLoading(true)
         try {
             const res = await fetch(`https://api.github.com/users/akifz21/repos?sort=created`, { headers })
             const data = await res.json()
@@ -40,14 +39,17 @@ export default function Projects({ GITHUB_AUTH_TOKEN }) {
                     <h1 className="md:text-4xl text-2xl font-bold">Projects 📚</h1>
                 </div>
                 {
-                    isLoading ? <div
-                        className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-                        role="status">
-                        <span
-                            className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                        >Loading...</span
-                        >
-                    </div> :
+                    isLoading ?
+                        <div className='h-screen'>
+
+                            <div
+                                className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                role="status">
+                                <span
+                                    className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                >Loading...</span>
+                            </div>
+                        </div> :
                         repos.map((repo) => (
                             <Card key={repo.id} name={repo.name} watchers={repo.watchers} description={repo.description} url={repo.html_url} />
                         ))
