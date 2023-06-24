@@ -1,9 +1,8 @@
+'use client'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const isDark = () =>
-    (localStorage && localStorage.theme === 'dark') ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+
 
 const getThemeString = (isDark) => (isDark ? 'dark' : 'light')
 
@@ -19,11 +18,6 @@ const DarkModeToggle = () => {
         }
         setDarkMode(!isDarkMode)
     }
-
-    useEffect(() => {
-        setDarkMode(isDark())
-    }, [])
-
     const darkModeActive =
         typeof window !== 'undefined' && document.documentElement.classList.contains('dark')
     return (
@@ -34,7 +28,7 @@ const DarkModeToggle = () => {
                 key={darkModeActive ? 'dark-icon' : 'light-icon'}
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.3 }}
             >
                 {darkModeActive ? '🌙' : '☀️'}
             </motion.button>

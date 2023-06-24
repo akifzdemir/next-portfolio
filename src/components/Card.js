@@ -1,3 +1,4 @@
+'use client'
 import { FiGithub } from 'react-icons/fi'
 import { motion, useInView } from 'framer-motion'
 
