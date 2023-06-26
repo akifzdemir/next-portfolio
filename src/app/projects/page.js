@@ -33,11 +33,12 @@ export default async function Projects() {
 
     const repos = await getData()
 
+
     return (
         <Layout variants={variants}>
             <div className='mt-24 flex flex-col gap-7 items-center content-center justify-center w-full' >
                 <div className='text-center self-center'>
-                    <h1 className="md:text-4xl text-2xl font-bold">Projects 📚</h1>
+                    <h1 className="md:text-4xl text-3xl font-bold">Projects</h1>
                 </div>
                 {
                     repos.map((repo) => (

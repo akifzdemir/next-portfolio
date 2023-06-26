@@ -16,10 +16,10 @@ export default function About() {
                 <div>
                     <h1 className="md:text-4xl text-2xl font-bold">About me </h1>
                 </div>
-                <div className="mt-3 flex flex-col dark:shadow-zinc-600 dark:shadow-lg shadow-2xl p-4  lg:p-10 rounded-2xl gap-4 text-base xl:text-xl font-light text-left ">
+                <div className=" sm:mt-3 flex flex-col dark:bg-black  shadow-2xl p-4  lg:p-10 rounded-2xl gap-4 text-base xl:text-xl font-light text-left ">
                     <p>
-                        Hello there! My name is Mehmet Akif, and I'm a third-year computer engineering student with a passion for developing software applications.
-                        With extensive experience in Java, Spring boot, .NET, React, HTML, CSS, JavaScript, Next.js, Node.js, and SQL, I have a strong foundation in full-stack development.
+                        Hello there! My name is Mehmet Akif, and I'm a third-year computer engineering student and Jr. Full-stack developer at <a className="text-sky-600" href="https://sehirteknolojileri.com/">Sehir Teknolojileri Merkezi. </a>
+                        <p> My technical skills are Java, Spring boot, React, HTML, CSS, JavaScript, Next.js, Node.js, and SQL, I have a strong foundation in full-stack development.</p>
                     </p>
                     <p>
                         In addition to my technical skills, I have also learned essential concepts such as data structures, algorithms,

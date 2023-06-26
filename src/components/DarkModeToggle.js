@@ -1,8 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-
-
+import Moon from '../../public/moon.svg'
+import Sun from '../../public/sun.svg'
+import Image from 'next/image'
 
 const getThemeString = (isDark) => (isDark ? 'dark' : 'light')
 
@@ -18,6 +19,7 @@ const DarkModeToggle = () => {
         }
         setDarkMode(!isDarkMode)
     }
+
     const darkModeActive =
         typeof window !== 'undefined' && document.documentElement.classList.contains('dark')
     return (
@@ -30,7 +32,7 @@ const DarkModeToggle = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.3 }}
             >
-                {darkModeActive ? '🌙' : '☀️'}
+                {darkModeActive ? <Image src={Moon} width={30} /> : <Image src={Sun} width={35} />}
             </motion.button>
         </AnimatePresence>
     )
