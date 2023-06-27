@@ -9,7 +9,7 @@ import img from '../../public/IMG_20220522_212930_776.jpg'
 
 export const metadata = {
   title: 'Home',
-  decription: "Mehmet Akif Özdemir portfolio page"
+  description: "Mehmet Akif Özdemir portfolio"
 }
 
 

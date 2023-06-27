@@ -20,7 +20,8 @@ export const getData = async () => {
 }
 
 export const metadata = {
-    title: "Projects"
+    title: "Projects",
+    description: "Mehmet Akif Özdemir About"
 }
 
 
