@@ -31,7 +31,7 @@ export default function Cursor() {
   return (
     <motion.div
       style={{ left: smoothMouse.x, top: smoothMouse.y }}
-      className="w-[30px] h-[30px] bg-black dark:bg-white fixed  pointer-events-none z-[99]  rounded-full"
+      className="w-[30px] h-[30px] hidden md:flex bg-black dark:bg-white fixed  pointer-events-none z-[99]  rounded-full"
     ></motion.div>
   );
 }

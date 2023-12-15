@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={theme}>
       <body
-        className={`${inter.className} transition-colors duration-500  dark:bg-zinc-900 dark:text-white `}
+        className={`${inter.className} transition-none lg:transition-colors dark:bg-zinc-900 dark:text-white `}
       >
         <Cursor />
         <Header theme={theme} />
