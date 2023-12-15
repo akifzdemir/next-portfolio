@@ -18,7 +18,7 @@ export default function Repositories() {
   return (
     <div id="repos" className="flex flex-col gap-12 pb-32">
       <div className="flex flex-col gap-2">
-        <h1 className="font-bold text-8xl lg:text-6xl">Repositories</h1>
+        <h1 className="font-bold text-4xl lg:text-6xl">Repositories</h1>
         <p className="opacity-60 font-light">My Github Repositories</p>
       </div>
       {isLoading ? (
