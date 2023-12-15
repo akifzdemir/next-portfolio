@@ -15,10 +15,7 @@ export default function Techs() {
             <h2 className="opacity-40 font-bold text-xl  border-b-2 border-black">{tech.title}</h2>
             <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 ">
               {tech.data.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between px-10 md:px-14 2xl:px-20 py-3"
-                >
+                <div key={i} className="flex items-center justify-between  md:px-14 2xl:px-20 py-3">
                   <p className="font-semibold">{item.text}</p>
                   <div className="text-4xl">{item.icon}</div>
                 </div>
