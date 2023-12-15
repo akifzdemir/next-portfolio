@@ -8,7 +8,7 @@ import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 
 export default async function Intro() {
   const maskItems = [
-    <p className="relative text-4xl sm:text-4xl lg:text-5xl xl:text-7xl font-bold ">
+    <p key={"1"} className="relative text-4xl sm:text-4xl lg:text-5xl xl:text-7xl font-bold ">
       Hello, I'm Akif
       <Image
         src={HandSvg}
@@ -16,13 +16,13 @@ export default async function Intro() {
         alt="hand"
       />
     </p>,
-    <p className=" text-xl md:text-2xl sm:text-3xl xl:text-4xl  font-extralight">
+    <p key={"2"} className=" text-xl md:text-2xl sm:text-3xl xl:text-4xl  font-extralight">
       Software Developer and
     </p>,
-    <p className="text-xl md:text-2xl sm:text-3xl xl:text-4xl font-extralight">
+    <p key={"3"} className="text-xl md:text-2xl sm:text-3xl xl:text-4xl font-extralight">
       4th grade Computer Engineering Student
     </p>,
-    <p className="flex flex-row gap-4 text-5xl">
+    <p key={"4"} className="flex flex-row gap-4 text-5xl">
       <a target="_blank" href="https://github.com/akifzdemir">
         <BiLogoGithub />
       </a>
