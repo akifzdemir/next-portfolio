@@ -1,6 +1,7 @@
 "use client";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
 
 function About() {
   let refs = useRef([]);
@@ -45,23 +46,20 @@ function About() {
     return body;
   };
 
-  const createAnimation = () => {
+  useGSAP(() => {
     gsap.to(refs.current, {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
         start: "top center+=250",
         end: `+=${window.innerHeight}/1.5`,
+        once: true,
       },
       opacity: 1,
       ease: "none",
       stagger: 0.05,
     });
-  };
-
-  useLayoutEffect(() => {
-    createAnimation();
-  }, []);
+  });
 
   return (
     <div

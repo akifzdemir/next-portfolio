@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import useSWR from "swr";
-import Card from "./Card";
-import { fetcher } from "../lib/fetcher";
+import { fetcher } from "../../lib/fetcher";
 import { Loader2 } from "lucide-react";
+import RepositoryCard from "./repository-card";
 
 export default function Repositories() {
   const [size, setSize] = useState(4);
@@ -31,7 +31,7 @@ export default function Repositories() {
             ?.sort((a, b) => b.watchers - a.watchers)
             ?.slice(0, size)
             ?.map((repo, i) => (
-              <Card key={repo.id} repo={repo} />
+              <RepositoryCard key={repo.id} repo={repo} />
             ))}
           <div className="flex flex-row w-full mt-6 items-center justify-center">
             <>

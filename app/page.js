@@ -1,7 +1,7 @@
-import About from "./components/About";
-import Intro from "./components/Home";
-import Repositories from "./components/Repositories";
 import Techs from "./components/Techs";
+import About from "./components/about";
+import Intro from "./components/home";
+import Repositories from "./components/repositories";
 
 export default async function Home() {
   return (

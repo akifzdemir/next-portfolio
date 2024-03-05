@@ -1,8 +1,8 @@
 import { cookies } from "next/headers";
-import Header from "./components/Header";
+import Header from "./components/common/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Cursor from "./components/Cursor";
+import Cursor from "./components/common/cursor";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       >
         <Cursor />
         <Header theme={theme} />
-        <main className="px-8 sm:px-16 md:px-36 xl:px-48 2xl:px-52  3xl:px-72">{children}</main>
+        <main className="px-8 sm:px-16 md:px-36 xl:px-48 2xl:px-52 3xl:px-72 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] ">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -25,6 +25,7 @@ export default function Card({ repo }) {
       whileHover="hover"
       className="flex w-full justify-between items-center 
         py-4 border-t-2
+        h-20
         transition-all duration-[0.2s]
        border-black dark:border-white  cursor-pointer flex-row"
     >

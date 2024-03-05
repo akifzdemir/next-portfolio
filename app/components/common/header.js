@@ -1,10 +1,10 @@
 "use client";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./dark-mode-toggle";
 import { useLayoutEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SideMenu from "./SideMenu";
+import SideMenu from "./side-menu";
 
 export default function Header({ theme }) {
   const [lenis, setLenis] = useState(null);

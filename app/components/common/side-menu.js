@@ -8,7 +8,10 @@ export default function SideMenu({ lenis }) {
 
     enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
 
-    exit: { x: "calc(100% + 100px)", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+    exit: {
+      x: "calc(100% + 100px)",
+      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    },
   };
 
   const [open, setOpen] = useState(false);
@@ -26,7 +29,9 @@ export default function SideMenu({ lenis }) {
         onClick={toggle}
         className="z-50"
       >
-        <AnimatePresence>{open ? <X size={40} /> : <Menu size={40} />}</AnimatePresence>
+        <AnimatePresence>
+          {open ? <X size={40} /> : <Menu size={40} />}
+        </AnimatePresence>
       </motion.button>
       <AnimatePresence>
         {open && (
@@ -52,14 +57,13 @@ export default function SideMenu({ lenis }) {
                 <button onClick={() => lenis.scrollTo("#about")}>About</button>
               </li>
               <li>
-                <button onClick={() => lenis.scrollTo("#techs")}>Technologies</button>
+                <button onClick={() => lenis.scrollTo("#techs")}>
+                  Technologies
+                </button>
               </li>
               <li>
-                <button onClick={() => lenis.scrollTo("#repos")}>Repositories</button>
-              </li>
-              <li>
-                <button className="opacity-25" disabled>
-                  Blog -soon
+                <button onClick={() => lenis.scrollTo("#repos")}>
+                  Repositories
                 </button>
               </li>
             </ul>
