@@ -30,8 +30,10 @@ export default function Card({ repo }) {
        border-black dark:border-white  cursor-pointer flex-row"
     >
       <div className="flex flex-col">
-        <h2 className="font-bold flex-1 text-lg">{repo.name}</h2>
-        <p className="font-light opacity-60 text-md">{repo.description}</p>
+        <h2 className="font-bold flex-1 text-lg line-clamp-1">{repo.name}</h2>
+        <p className="font-light opacity-60 text-md line-clamp-1">
+          {repo.description}
+        </p>
       </div>
       <div className="flex flex-row gap-2 items-center ">
         <div>{repo.language}</div>
